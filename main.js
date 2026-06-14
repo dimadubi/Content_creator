@@ -17,10 +17,12 @@ function toggleMenu() {
 
 const navLinks = document.querySelectorAll('.nav-list a');
 
-// 2. Проходимся по каждой ссылке
+
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
-        toggleMenu()
+        if (navList.classList.contains('active')) {
+            toggleMenu();
+        }
     });
 });
 
